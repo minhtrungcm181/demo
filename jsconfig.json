@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "lib": [
+			"es2021"
+		],
+      "target": "ES6",
+      "module": "ES2020",
+      "checkJs": true,
+	    "moduleResolution": "node",
+	  	"esModuleInterop": false,
+		  "allowSyntheticDefaultImports": true,
+      "baseUrl": "./",
+      "paths": {
+        "*": ["src/*"]
+      },
+    },
+    
+    "exclude": [
+      "node_modules",
+    ]
+  }
