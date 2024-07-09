@@ -25,12 +25,12 @@ export default class user extends Model {
   }, {
     sequelize,
     tableName: 'user',
+    schema: 'public',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "user_pkey",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "user_id" },
         ]

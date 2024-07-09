@@ -22,36 +22,25 @@ export default class food extends Model {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    desc: {
+    description: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
     type_id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'food_type',
-        key: 'type_id'
-      }
+      allowNull: true
     }
   }, {
     sequelize,
     tableName: 'food',
+    schema: 'public',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "food_pkey",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "food_id" },
-        ]
-      },
-      {
-        name: "type_id",
-        using: "BTREE",
-        fields: [
-          { name: "type_id" },
         ]
       },
     ]

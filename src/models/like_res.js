@@ -29,21 +29,14 @@ export default class like_res extends Model {
   }, {
     sequelize,
     tableName: 'like_res',
+    schema: 'public',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "like_res_pkey",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "user_id" },
-          { name: "res_id" },
-        ]
-      },
-      {
-        name: "res_id",
-        using: "BTREE",
-        fields: [
           { name: "res_id" },
         ]
       },

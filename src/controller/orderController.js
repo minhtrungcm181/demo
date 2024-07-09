@@ -1,6 +1,7 @@
 import { responseSend } from "../config/config.js";
+import sequelize from "../models/db_connector.js";
 import initModels from "../models/init-models.js";
-import sequelize from "../models/db_connector.js/index.js";
+
 
 let models = initModels(sequelize);
 export const orderCreate = async(req, res) => {

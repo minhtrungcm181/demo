@@ -37,21 +37,14 @@ export default class order extends Model {
   }, {
     sequelize,
     tableName: 'order',
+    schema: 'public',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "order_pkey",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "user_id" },
-          { name: "food_id" },
-        ]
-      },
-      {
-        name: "food_id",
-        using: "BTREE",
-        fields: [
           { name: "food_id" },
         ]
       },

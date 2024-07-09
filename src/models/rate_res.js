@@ -33,21 +33,14 @@ export default class rate_res extends Model {
   }, {
     sequelize,
     tableName: 'rate_res',
+    schema: 'public',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "rate_res_pkey",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "user_id" },
-          { name: "res_id" },
-        ]
-      },
-      {
-        name: "res_id",
-        using: "BTREE",
-        fields: [
           { name: "res_id" },
         ]
       },

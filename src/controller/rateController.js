@@ -2,7 +2,8 @@
 import initModels from "../models/init-models.js";
 import { response } from "express";
 import { responseSend } from "../config/config.js";
-import sequelize from "../models/db_connector.js/index.js";
+import sequelize from "../models/db_connector.js";
+
 
 let models = initModels(sequelize);
 export const rateCreate = async(req, res) =>{

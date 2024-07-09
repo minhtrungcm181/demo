@@ -7,10 +7,11 @@ import {
   likeRestaurant,
   unlikeByUser,
 } from "../controller/restaurantController.js";
+import { authenticateJWT } from "../config/guard.js";
 
 const restaurantRouter = express.Router();
 
-restaurantRouter.get("/all", getAllRestaurant);
+restaurantRouter.get("/all", authenticateJWT ,getAllRestaurant);
 
 restaurantRouter.post("/like", likeRestaurant);
 

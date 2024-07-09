@@ -29,21 +29,14 @@ export default class sub_food extends Model {
   }, {
     sequelize,
     tableName: 'sub_food',
+    schema: 'public',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "sub_food_pkey",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "sub_id" },
-        ]
-      },
-      {
-        name: "food_id",
-        using: "BTREE",
-        fields: [
-          { name: "food_id" },
         ]
       },
     ]

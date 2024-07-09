@@ -18,19 +18,19 @@ export default class restaurant extends Model {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    desc: {
+    description: {
       type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
     tableName: 'restaurant',
+    schema: 'public',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "restaurant_pkey",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "res_id" },
         ]

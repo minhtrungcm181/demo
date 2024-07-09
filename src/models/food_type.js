@@ -17,12 +17,12 @@ export default class food_type extends Model {
   }, {
     sequelize,
     tableName: 'food_type',
+    schema: 'public',
     timestamps: false,
     indexes: [
       {
-        name: "PRIMARY",
+        name: "food_type_pkey",
         unique: true,
-        using: "BTREE",
         fields: [
           { name: "type_id" },
         ]

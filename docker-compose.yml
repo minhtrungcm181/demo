@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:15
+    container_name: demo_postgres
+    ports:
+      - "15432:5432"
+    volumes:
+      - '${PWD}/dev/db/data:/var/lib/postgresql/data'
+    environment:
+      - POSTGRES_DB=${DB_DATABASE}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - TZ=Asia/Ho_Chi_Minh
+  
