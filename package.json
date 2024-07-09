@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node --env-file=.env --watch src/index.js",
-    "sequelize-auto": "sequelize-auto -h localhost -d food_db -u admin -x admin -p 15432 --dialect postgres -o ./src/models -l esm"
+    "sequelize-auto": "sequelize-auto -h localhost -d food_db -u admin -x admin -p 15432 --dialect postgres -o ./src/models -l esm",
+    "bootstrap":"docker-compose up -d"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
